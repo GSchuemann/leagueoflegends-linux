@@ -22,15 +22,15 @@ winetricks -q d3dx9
 echo "*************************************************"
 echo "Applying League of Legends wine prefix registry settings."
 echo "*************************************************"
-wine regedit /S lol.reg
+/home/deck/wine-lol/bin/wine regedit /S lol.reg
 
 
 echo "*************************************************"
 echo "Installing League of Legends. !!!Please do not launch the game!!!"
 echo "*************************************************"
 
-curl -o  https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.na.exe 
-/home/deck/wine-lol/bin/wine 'League of Legends installer NA.exe'
+curl -o live.na.exe https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.na.exe 
+/home/deck/wine-lol/bin/wine live.na.exe 'League of Legends installer NA.exe'
 
 # TODO: The installer will create shortcuts (or better wine will create them)
 #       - Locate these .desktop files
