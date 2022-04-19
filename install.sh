@@ -10,6 +10,7 @@ echo "************************************************"
 echo "Installing winetricks"
 echo "************************************************"
 curl -o /home/deck/wine-lol/winetricks http://winetricks.org/winetricks 
+chmod +x /home/deck/wine-lol/winetricks
 
 mkdir -p "$WINEPREFIX"
 
@@ -17,7 +18,7 @@ echo "*************************************************"
 echo "Creating wine prefix and performing winetricks."
 echo "*************************************************"
 
-winetricks -q d3dx9
+/home/deck/wine-lol/winetricks -q d3dx9
 
 echo "*************************************************"
 echo "Applying League of Legends wine prefix registry settings."
